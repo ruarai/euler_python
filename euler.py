@@ -5,4 +5,53 @@ def problem_1():
             s+=i
     print(s)
 
-problem_1()
+def problem_2():
+    a, b = 2, 1
+    s = 0
+    while a < 4 * 1000 * 1000:
+        if a % 2 == 0:
+            s+=a
+        a, b = a + b, a
+    print(s)
+
+def sieve(n):
+    primes = [1]*n
+
+    for u in range(2, n):
+        for v in range(2, n):
+            if u * v < n:
+                primes[u*v] = 0
+                print(u*v);
+
+def palindrome(str):
+    for i in range(len(str)/2):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+
+def problem_4():
+    l = 0
+
+    for x in range(1, 999):
+        for y in range(1, 999):
+            if palindrome(str(x*y)) and x*y > l:
+                print(x*y)
+                l = x * y
+
+def problem_5():
+    n = 20
+    while True:
+        divisible = True
+        for i in range(2, 20):
+            if n % i != 0:
+                divisible = False
+                break
+        if divisible:
+            print(n)
+            break
+
+        n+= 20
+
+
+
+problem_5()
