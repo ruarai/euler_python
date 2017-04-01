@@ -1,6 +1,6 @@
 def problem_1():
     s = 0
-    for i in range(1, 1000):
+    for i in range(1, 1001):
         if i % 5 == 0 or i % 3 == 0:
             s+=i
     print(s)
@@ -32,8 +32,8 @@ def palindrome(str):
 def problem_4():
     l = 0
 
-    for x in range(1, 999):
-        for y in range(1, 999):
+    for x in range(1, 1000):
+        for y in range(1, 1000):
             if palindrome(str(x*y)) and x*y > l:
                 print(x*y)
                 l = x * y
@@ -52,6 +52,13 @@ def problem_5():
 
         n+= 20
 
+def problem_6():
+    linSum = 0
+    squareSum = 0
+    for i in range(1, 101):
+        linSum+=i
+        squareSum+=i*i
 
+    print(linSum*linSum-squareSum)
 
-problem_5()
+problem_6()
