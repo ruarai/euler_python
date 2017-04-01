@@ -1,7 +1,8 @@
-def prob1(n):
-    a, b = 0, 1
-    for i in range(1,n):
-        a, b = b, a + b
-    return b
+def problem_1():
+    s = 0
+    for i in range(1, 1000):
+        if i % 5 == 0 or i % 3 == 0:
+            s+=i
+    print(s)
 
-prob1()
+problem_1()
